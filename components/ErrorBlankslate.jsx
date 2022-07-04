@@ -1,6 +1,6 @@
 import { Code, Divider, Text } from '@geist-ui/core';
 import { AlertOctagon } from '@geist-ui/icons';
-import styles from '../styles/Error.module.css';
+import styles from '../styles/Blankslate.module.css';
 
 export default function ErrorBlankslate(props) {
   return (

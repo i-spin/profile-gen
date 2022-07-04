@@ -1,8 +1,9 @@
 import { Card, Grid } from '@geist-ui/core'
 import Image from 'next/image'
 import useSWR from 'swr';
-import ErrorPage from '../components/error';
-import LoadingPage from './loading';
+import Bar from '../components/Bar';
+import ErrorBlankslate from '../components/ErrorBlankslate';
+import LoadingBlankslate from '../components/LoadingBlankslate';
 import styles from '../styles/Home.module.css';
 
 export default function Home(props) {
@@ -10,13 +11,15 @@ export default function Home(props) {
   const { data, error } = useSWR('/api/config', fetchJSON);
 
   if (error) return (
-    <ErrorPage stack={JSON.stringify(data)} />
+    <ErrorBlankslate stack={JSON.stringify(data)} />
   )
   if (!data) return (
-    <LoadingPage />
+    <LoadingBlankslate />
   )
 
   return (
+    <>
+    <Bar />
     <Grid.Container justify='center'>
       <Grid lg={24}>
         <Card shadow>
@@ -24,5 +27,6 @@ export default function Home(props) {
         </Card>
       </Grid>
     </Grid.Container>
+    </>
   )
 }

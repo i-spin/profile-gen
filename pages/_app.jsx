@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Button, CssBaseline, GeistProvider } from '@geist-ui/core'
 import '../styles/globals.css'
-import { Moon, Sun } from '@geist-ui/icons'
+import { Provider } from 'react-redux'
+import store from './store';
 
 function App({ Component, pageProps }) {
   const [themeType, setThemeType] = useState('dark')
@@ -11,7 +12,9 @@ function App({ Component, pageProps }) {
   return (
     <GeistProvider themeType={themeType}>
       <CssBaseline />
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </GeistProvider>
   )
 }
