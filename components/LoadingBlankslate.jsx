@@ -1,4 +1,4 @@
-import { Code, Divider, Loading, Text } from '@geist-ui/core';
+import { Divider, Loading, Text } from '@geist-ui/core';
 import styles from '../styles/Blankslate.module.css';
 
 export default function LoadingBlankslate() {
