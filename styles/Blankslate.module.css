@@ -1,0 +1,9 @@
+.blankslate-page {
+  margin: 5vh 10vw;
+}
+
+.blankslate-title, .blankslate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
