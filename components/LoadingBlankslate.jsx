@@ -1,5 +1,4 @@
 import { Code, Divider, Loading, Text } from '@geist-ui/core';
-import { AlertOctagon } from '@geist-ui/icons';
 import styles from '../styles/Blankslate.module.css';
 
 export default function LoadingBlankslate() {

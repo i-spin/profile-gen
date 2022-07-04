@@ -1,22 +1,19 @@
-import { useState } from 'react'
-import { Button, CssBaseline, GeistProvider } from '@geist-ui/core'
-import '../styles/globals.css'
-import { Provider } from 'react-redux'
-import store from './store';
+import { CssBaseline, GeistProvider } from "@geist-ui/core";
+import "../styles/globals.css";
+import store from "../redux/store";
+import { useState } from "react";
 
 function App({ Component, pageProps }) {
-  const [themeType, setThemeType] = useState('dark')
-  const switchThemes = () => {
-    setThemeType(last => (last === 'dark' ? 'light' : 'dark'))
-  }
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme((last) => (last === "dark" ? "light" : "dark"));
+  };
   return (
-    <GeistProvider themeType={themeType}>
+    <GeistProvider themeType={theme}>
       <CssBaseline />
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <Component {...pageProps} />
     </GeistProvider>
-  )
+  );
 }
 
-export default App
+export default App;

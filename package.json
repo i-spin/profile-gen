@@ -11,7 +11,6 @@
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
     "@geist-ui/icons": "^1.0.2",
-    "@reduxjs/toolkit": "^1.8.3",
     "graceful-fs": "^4.2.10",
     "next": "12.2.0",
     "react": "18.2.0",

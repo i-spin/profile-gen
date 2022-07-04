@@ -4,7 +4,6 @@ import useSWR from 'swr';
 import Bar from '../components/Bar';
 import ErrorBlankslate from '../components/ErrorBlankslate';
 import LoadingBlankslate from '../components/LoadingBlankslate';
-import styles from '../styles/Home.module.css';
 
 export default function Home(props) {
   const fetchJSON = (...args) => fetch(...args).then(res => res.json());
