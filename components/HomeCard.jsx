@@ -4,7 +4,7 @@ export default function HomeCard(props) {
   const { title, name, src, dimentions } = props;
 
   return (
-    <Card shadow hoverable width="100%">
+    <Card shadow hoverable height={dimentions.height}>
       <Grid.Container gap={3} justify="space-evenly">
         <Grid md={12}>
           <Image draggable={false} src={src} alt={`${name}'s profile`} width={dimentions.width} height={dimentions.height} />
