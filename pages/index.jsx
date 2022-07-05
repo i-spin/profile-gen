@@ -8,8 +8,6 @@ import { createRef, useRef } from "react";
 import HomeCard from "../components/HomeCard";
 
 export default function Home(props) {
-  const barRef = createRef();
-  const parallexRef = useRef();
   const fetchJSON = (...args) => fetch(...args).then((res) => res.json());
   const { data, error } = useSWR("/api/config", fetchJSON);
 
