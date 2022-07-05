@@ -11,7 +11,7 @@ export default function Home(props) {
   const fetchJSON = (...args) => fetch(...args).then((res) => res.json());
   const { data, error } = useSWR("/api/config", fetchJSON);
 
-  if (error) return <ErrorBlankslate stack={JSON.stringify(data)} />;
+  if (error) return <ErrorBlankslate stack={`Information:\n${JSON.stringify(error, null, 2)}`} />;
   if (!data) return <LoadingBlankslate />;
 
   return (
