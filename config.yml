@@ -1,7 +1,11 @@
 ---
 profile:
+  title: Hello, I'm i-spin!
   name: i-spin
-  image: /images/newpfp.png
+  image:
+    path: /images/newpfp.png
+    dimentions:
+      height: 50%
 contacts: 
   discord: i-spin#9974
   twitter: sourTaste000

@@ -1,31 +1,29 @@
-import { Card, Grid } from '@geist-ui/core'
-import Image from 'next/image'
-import useSWR from 'swr';
-import Bar from '../components/Bar';
-import ErrorBlankslate from '../components/ErrorBlankslate';
-import LoadingBlankslate from '../components/LoadingBlankslate';
+import { Page } from "@geist-ui/core";
+import useSWR from "swr";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ErrorBlankslate from "../components/ErrorBlankslate";
+import LoadingBlankslate from "../components/LoadingBlankslate";
+import Bar from "../components/Bar";
+import { createRef, useRef } from "react";
+import HomeCard from "../components/HomeCard";
 
 export default function Home(props) {
-  const fetchJSON = (...args) => fetch(...args).then(res => res.json());
-  const { data, error } = useSWR('/api/config', fetchJSON);
+  const barRef = createRef();
+  const parallexRef = useRef();
+  const fetchJSON = (...args) => fetch(...args).then((res) => res.json());
+  const { data, error } = useSWR("/api/config", fetchJSON);
 
-  if (error) return (
-    <ErrorBlankslate stack={JSON.stringify(data)} />
-  )
-  if (!data) return (
-    <LoadingBlankslate />
-  )
+  if (error) return <ErrorBlankslate stack={JSON.stringify(data)} />;
+  if (!data) return <LoadingBlankslate />;
 
   return (
-    <>
-    <Bar />
-    <Grid.Container justify='center'>
-      <Grid lg={24}>
-        <Card shadow>
-          <Image width='48px' height='48px' src={data.profile.image} alt={data.profile.name} />
-        </Card>
-      </Grid>
-    </Grid.Container>
-    </>
-  )
+    <Page>
+      <Page.Header>
+        <Bar currentTheme="dark" toggleTheme={() => {}} />
+      </Page.Header>
+      <Page.Content>
+        <HomeCard title={data.profile.title} name={data.profile.name} src={data.profile.image.path} dimentions={data.profile.image.dimentions}/>
+      </Page.Content>
+    </Page>
+  );
 }

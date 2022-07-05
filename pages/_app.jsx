@@ -1,15 +1,9 @@
 import { CssBaseline, GeistProvider } from "@geist-ui/core";
-import "../styles/globals.css";
-import store from "../redux/store";
-import { useState } from "react";
+import '../styles/globals.css';
 
 function App({ Component, pageProps }) {
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    setTheme((last) => (last === "dark" ? "light" : "dark"));
-  };
   return (
-    <GeistProvider themeType={theme}>
+    <GeistProvider themeType="light">
       <CssBaseline />
       <Component {...pageProps} />
     </GeistProvider>
