@@ -4,9 +4,12 @@ import { useState } from 'react';
 import styles from '../styles/Bar.module.css';
 
 export default function Bar(props) {
+  const { currentTheme, toggleTheme, parallaxRef } = props;
   const [currentPage, gotoPage] = useState(0);
-  const onChange = (value) => gotoPage(value);
-  const { currentTheme, toggleTheme} = props;
+  const onChange = (value) => {
+    gotoPage(value);
+    parallaxRef.current.scrollTo(value);
+  };
 
   return (
     <div className={styles['bar']}>
