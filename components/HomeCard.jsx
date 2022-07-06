@@ -5,7 +5,7 @@ export default function HomeCard(props) {
   const { title, name, image } = profile;
 
   return (
-    <Card shadow hoverable height={image.dimentions.height}>
+    <Card height={image.dimentions.height}>
       <Grid.Container gap={3} justify="space-evenly">
         <Grid md={12}>
           <Image draggable={false} src={image.path} alt={`${name}'s profile`} width={image.dimentions.width} height={image.dimentions.height} />
