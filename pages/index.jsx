@@ -45,23 +45,13 @@ export default function Home() {
         <Page.Content style={{ overflow: "hidden" }}>
           <Parallax pages={3} ref={parallaxRef}>
             <ParallaxLayer offset={0} speed={1.5}>
-              <HomeCard
-                title={data.profile.title}
-                name={data.profile.name}
-                src={data.profile.image.path}
-                dimentions={data.profile.image.dimentions}
-              />
+              <HomeCard profile={data.profile} />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.5}>
               <CommissionCard commissions={data.commissions} />
             </ParallaxLayer>
             <ParallaxLayer offset={2} speed={1.5}>
-              <HomeCard
-                title={data.profile.title}
-                name={data.profile.name}
-                src={data.profile.image.path}
-                dimentions={data.profile.image.dimentions}
-              />
+              <HomeCard profile={data.profile} />
             </ParallaxLayer>
           </Parallax>
         </Page.Content>
