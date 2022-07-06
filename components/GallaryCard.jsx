@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { Card, Grid, Image, Link, Text } from "@geist-ui/core";
 
 export default function GallaryCard(props) {
@@ -9,7 +8,7 @@ export default function GallaryCard(props) {
       <Grid.Container gap={3}>
         <Grid md={24} justify="center"><Text h1>Gallary</Text></Grid>
         {gallary.map((c) => (
-          <Grid md={12}>
+          <Grid md={12} key={c.title}>
             <Card shadow>
               <Image src={c.path} draggable={false} alt={c.title} />
               <Text h4>{c.title}</Text>
