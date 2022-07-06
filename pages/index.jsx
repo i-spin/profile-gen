@@ -5,8 +5,9 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ErrorBlankslate from "../components/ErrorBlankslate";
 import LoadingBlankslate from "../components/LoadingBlankslate";
 import Bar from "../components/Bar";
-import { createRef, useRef } from "react";
+import { useRef } from "react";
 import HomeCard from "../components/HomeCard";
+import CommissionCard from "../components/CommissionCard";
 
 export default function Home() {
   const parallaxRef = useRef();
@@ -35,9 +36,13 @@ export default function Home() {
       </Head>
       <Page>
         <Page.Header>
-          <Bar currentTheme="dark" toggleTheme={() => {}} parallaxRef={parallaxRef} />
+          <Bar
+            currentTheme="dark"
+            toggleTheme={() => {}}
+            parallaxRef={parallaxRef}
+          />
         </Page.Header>
-        <Page.Content style={{overflow: "hidden"}}>
+        <Page.Content style={{ overflow: "hidden" }}>
           <Parallax pages={3} ref={parallaxRef}>
             <ParallaxLayer offset={0} speed={1.5}>
               <HomeCard
@@ -48,12 +53,7 @@ export default function Home() {
               />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.5}>
-              <HomeCard
-                title={data.profile.title}
-                name={data.profile.name}
-                src={data.profile.image.path}
-                dimentions={data.profile.image.dimentions}
-              />
+              <CommissionCard commissions={data.commissions} />
             </ParallaxLayer>
             <ParallaxLayer offset={2} speed={1.5}>
               <HomeCard

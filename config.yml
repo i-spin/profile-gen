@@ -11,5 +11,23 @@ contacts:
   twitter: sourTaste000
   github: i-spin
 commissions:
-  "Fight Another Day":
-    image: /images/example.jpg
+  -
+    title: Fight Another Day
+    caption: 2021-01-23
+    path: "/images/fight another day.jpeg"
+  -
+    title: Stratosphere
+    caption: 2021-04-29
+    path: "/images/stratosphere.jpeg"
+  -
+    title: Castle
+    caption: 2021-06-30
+    path: "/images/castle.jpeg"
+  -
+    title: Civilization
+    caption: 2021-07-20
+    path: "/images/civilization.jpeg"
+  -
+    title: Island
+    caption: 2022-01-01
+    path: "/images/island.jpeg"
