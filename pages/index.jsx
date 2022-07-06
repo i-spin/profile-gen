@@ -7,7 +7,7 @@ import LoadingBlankslate from "../components/LoadingBlankslate";
 import Bar from "../components/Bar";
 import { useRef } from "react";
 import HomeCard from "../components/HomeCard";
-import CommissionCard from "../components/CommissionCard";
+import GallaryCard from "../components/GallaryCard";
 
 export default function Home(props) {
   const { toggleTheme, themeType } = props;
@@ -39,13 +39,13 @@ export default function Home(props) {
         <Page.Header>
           <Bar themeType={themeType} toggleTheme={toggleTheme} parallaxRef={parallaxRef} />
         </Page.Header>
-        <Page.Content style={{ overflow: "hidden" }}>
+        <Page.Content>
           <Parallax pages={3} ref={parallaxRef}>
             <ParallaxLayer offset={0} speed={1.5}>
               <HomeCard profile={data.profile} />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.5}>
-              <CommissionCard commissions={data.commissions} />
+              <GallaryCard commissions={data.commissions} />
             </ParallaxLayer>
             <ParallaxLayer offset={2} speed={1.5}>
               <HomeCard profile={data.profile} />

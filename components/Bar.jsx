@@ -18,8 +18,8 @@ export default function Bar(props) {
       </div>
       <Tabs className={styles['bar-tabs']} initialValue={0} hideDivider hideBorder onChange={onChange}>
         <Tabs.Item label='Home' value={0} />
-        <Tabs.Item label='Commissions' value={1} />
-        <Tabs.Item label='Settings' value={2} />
+        <Tabs.Item label='Gallary' value={1} />
+        <Tabs.Item label='Commissions' value={2} />
       </Tabs>
       <div className={styles['bar-controls']}>
         <Button iconRight={(themeType !== 'light') ? <Sun /> : <Moon />} auto onClick={toggleTheme}></Button>
