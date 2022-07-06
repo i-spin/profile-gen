@@ -5,7 +5,8 @@ profile:
   image:
     path: /images/newpfp.png
     dimentions:
-      height: 50%
+      height: 100%
+      width: 100%
 contacts: 
   discord: i-spin#9974
   twitter: sourTaste000

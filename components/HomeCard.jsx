@@ -5,10 +5,10 @@ export default function HomeCard(props) {
   const { title, name, image } = profile;
 
   return (
-    <Card height={image.dimentions.height}>
+    <Card style={{height: image.dimentions.height ?? "auto"}}>
       <Grid.Container gap={3} justify="space-evenly">
         <Grid md={12}>
-          <Image draggable={false} src={image.path} alt={`${name}'s profile`} width={image.dimentions.width} height={image.dimentions.height} />
+          <Image draggable={false} src={image.path} alt={`${name}'s profile`} width={image.dimentions.width ?? "auto"} height={image.dimentions.height ?? "auto"} />
         </Grid>
         <Grid lg={12}>
           <Text h1>{title}</Text>
