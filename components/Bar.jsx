@@ -16,7 +16,7 @@ export default function Bar(props) {
       <div>
         <Text h3 className={styles['bar-title']}><Coffee className={styles['bar-icon']}/> i-spin</Text>
       </div>
-      <Tabs className={styles['bar-tabs']} initialValue={0} hideDivider hideBorder onChange={onChange}>
+      <Tabs className={styles['bar-tabs']} value={currentPage} hideDivider onChange={onChange}>
         <Tabs.Item label='Home' value={0} />
         <Tabs.Item label='Gallary' value={1} />
         <Tabs.Item label='Commissions' value={2} />

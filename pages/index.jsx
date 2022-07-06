@@ -45,7 +45,7 @@ export default function Home(props) {
               <HomeCard profile={data.profile} />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.5}>
-              <GallaryCard commissions={data.commissions} />
+              <GallaryCard gallary={data.gallary} />
             </ParallaxLayer>
             <ParallaxLayer offset={2} speed={1.5}>
               <HomeCard profile={data.profile} />
