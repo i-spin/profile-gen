@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styles from '../styles/Bar.module.css';
 
 export default function Bar(props) {
-  const { currentTheme, toggleTheme, parallaxRef } = props;
+  const { themeType, toggleTheme, parallaxRef } = props;
   const [currentPage, gotoPage] = useState(0);
   const onChange = (value) => {
     gotoPage(value);
@@ -22,7 +22,7 @@ export default function Bar(props) {
         <Tabs.Item label='Settings' value={2} />
       </Tabs>
       <div className={styles['bar-controls']}>
-        <Button iconRight={(currentTheme === 'light') ? <Sun /> : <Moon />} auto onClick={toggleTheme}></Button>
+        <Button iconRight={(themeType !== 'light') ? <Sun /> : <Moon />} auto onClick={toggleTheme}></Button>
       </div>
     </div>
   )

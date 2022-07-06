@@ -9,7 +9,8 @@ import { useRef } from "react";
 import HomeCard from "../components/HomeCard";
 import CommissionCard from "../components/CommissionCard";
 
-export default function Home() {
+export default function Home(props) {
+  const { toggleTheme, themeType } = props;
   const parallaxRef = useRef();
   const fetchJSON = (...args) => fetch(...args).then((res) => res.json());
   const { data, error } = useSWR("/api/config", fetchJSON);
@@ -36,11 +37,7 @@ export default function Home() {
       </Head>
       <Page>
         <Page.Header>
-          <Bar
-            currentTheme="dark"
-            toggleTheme={() => {}}
-            parallaxRef={parallaxRef}
-          />
+          <Bar themeType={themeType} toggleTheme={toggleTheme} parallaxRef={parallaxRef} />
         </Page.Header>
         <Page.Content style={{ overflow: "hidden" }}>
           <Parallax pages={3} ref={parallaxRef}>
