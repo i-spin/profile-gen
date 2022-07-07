@@ -37,7 +37,7 @@ export default function Home(props) {
       </Head>
       <Page>
         <Page.Header>
-          <Bar themeType={themeType} toggleTheme={toggleTheme} parallaxRef={parallaxRef} />
+          <Bar themeType={themeType} toggleTheme={toggleTheme} parallaxRef={parallaxRef} title={data.profile.name} />
         </Page.Header>
         <Page.Content>
           <Parallax pages={3} ref={parallaxRef}>

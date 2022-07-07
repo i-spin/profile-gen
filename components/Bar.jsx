@@ -1,10 +1,10 @@
 import { Text, Button, Tabs } from '@geist-ui/core';
-import { Sun, Moon, Coffee } from '@geist-ui/icons';
+import { Sun, Moon } from '@geist-ui/icons';
 import { useState } from 'react';
 import styles from '../styles/Bar.module.css';
 
 export default function Bar(props) {
-  const { themeType, toggleTheme, parallaxRef } = props;
+  const { themeType, toggleTheme, parallaxRef, title } = props;
   const [currentPage, gotoPage] = useState(0);
   const onChange = (value) => {
     gotoPage(value);
@@ -14,7 +14,7 @@ export default function Bar(props) {
   return (
     <div className={styles['bar']}>
       <div>
-        <Text h3 className={styles['bar-title']}><Coffee className={styles['bar-icon']}/> i-spin</Text>
+        <Text h3 className={styles['bar-title']}>{title}</Text>
       </div>
       <Tabs className={styles['bar-tabs']} value={currentPage} hideDivider onChange={onChange}>
         <Tabs.Item label='Home' value={0} />
