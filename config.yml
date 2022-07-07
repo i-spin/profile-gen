@@ -7,10 +7,16 @@ profile:
     dimentions:
       height: 100%
       width: 100%
-contacts: 
-  discord: i-spin#9974
-  twitter: sourTaste000
-  github: i-spin
+  contacts: 
+    - 
+      platform: Discord
+      value: i-spin#9974
+    -
+      platform: Twitter
+      value: sourTaste000
+    -
+      platform: GitHub
+      value: i-spin
 gallary:
   -
     title: Fight Another Day
