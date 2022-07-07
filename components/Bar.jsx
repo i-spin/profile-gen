@@ -18,7 +18,7 @@ export default function Bar(props) {
       </div>
       <Tabs className={styles['bar-tabs']} value={currentPage} hideDivider onChange={onChange}>
         <Tabs.Item label='Home' value={0} />
-        <Tabs.Item label='Gallary' value={1} />
+        <Tabs.Item label='Gallery' value={1} />
         <Tabs.Item label='Commissions' value={2} />
       </Tabs>
       <div className={styles['bar-controls']}>
