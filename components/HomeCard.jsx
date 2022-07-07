@@ -1,5 +1,4 @@
-import { Card, Grid, Image, Link, Text } from "@geist-ui/core";
-import { Twitter } from "@geist-ui/icons";
+import { Card, Grid, Image, Text } from "@geist-ui/core";
 import styles from "../styles/HomeCard.module.css";
 import SocialTag from "./SocialTag";
 
