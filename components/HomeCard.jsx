@@ -1,4 +1,5 @@
 import { Card, Grid, Image, Text } from "@geist-ui/core";
+import ReactMarkdown from 'react-markdown';
 import styles from "../styles/HomeCard.module.css";
 import SocialTag from "./SocialTag";
 
@@ -20,7 +21,7 @@ export default function HomeCard(props) {
         <Grid md={12}>
           <div className={styles["profile-details"]}>
             <Text h1>{profile.title}</Text>
-            <Text p>{profile.about}</Text>
+            <Text p><ReactMarkdown>{profile.about}</ReactMarkdown></Text>
             <div className={styles["profile-contacts"]}>
               <Text h3>Socials:</Text>
               <div className={styles["profile-contacts-links"]}>
