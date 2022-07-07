@@ -8,7 +8,7 @@ export default function GalleryCard(props) {
       <Grid.Container gap={3}>
         <Grid md={24} justify="center"><Text h1>Gallery</Text></Grid>
         {gallery.map((c) => (
-          <Grid md={12} key={c.title}>
+          <Grid md={12} key={c.title} justify="center">
             <Card shadow>
               <Image src={c.path} draggable={false} alt={c.title} />
               <Text h4>{c.title}</Text>
