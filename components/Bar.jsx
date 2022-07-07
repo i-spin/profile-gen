@@ -4,8 +4,7 @@ import { useState } from 'react';
 import styles from '../styles/Bar.module.css';
 
 export default function Bar(props) {
-  const { themeType, toggleTheme, parallaxRef, extraPages, title } = props;
-  let totalPages = 0;
+  const { themeType, toggleTheme, parallaxRef, title } = props;
   const [currentPage, gotoPage] = useState(0);
   const onChange = (value) => {
     gotoPage(value);
@@ -18,13 +17,9 @@ export default function Bar(props) {
         <Text h3 className={styles['bar-title']}>{title}</Text>
       </div>
       <Tabs className={styles['bar-tabs']} value={currentPage} hideDivider onChange={onChange}>
-        <Tabs.Item label='Home' value={totalPages++} />
-        <Tabs.Item label='Gallery' value={totalPages++} />
-        {
-          extraPages.map((p) => (
-            <Tabs.Item key={p.name} label={p.name} value={totalPages++} />
-          ))
-        }
+        <Tabs.Item label='Home' value={0} />
+        <Tabs.Item label='Gallery' value={1} />
+        <Tabs.Item label='Test' value={2} />
       </Tabs>
       <div className={styles['bar-controls']}>
         <Button iconRight={(themeType !== 'light') ? <Sun /> : <Moon />} auto onClick={toggleTheme}></Button>

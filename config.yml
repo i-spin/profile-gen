@@ -44,10 +44,7 @@ gallery:
     title: Island
     caption: 2022-01-01
     path: "/images/island.jpeg"
-pages:
+pages: # every markdown page should be in the "public/extras" folder
   -
-    name: Terms of Service
-    path: '/extras/tos.md'
-  -
-    name: Test Page
-    path: '/extras/test.md'
+    name: Long Markdown
+    path: 'longmd.md'
