@@ -40,3 +40,10 @@ gallery:
     title: Island
     caption: 2022-01-01
     path: "/images/island.jpeg"
+pages:
+  -
+    name: Terms of Service
+    path: '/extras/tos.md'
+  -
+    name: Test Page
+    path: '/extras/test.md'
