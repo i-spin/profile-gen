@@ -25,7 +25,7 @@ export default function HomeCard(props) {
               <Text h3>Contacts:</Text>
               <div className={styles["profile-contacts-links"]}>
                 {profile.contacts.map((contact) => (
-                  <SocialTag platform={contact.platform} iconSize={20} user={contact.value} />
+                  <SocialTag key={`${contact.platform}-${contact.value}`} platform={contact.platform} iconSize={20} user={contact.value} />
                 ))}
               </div>
             </div>
