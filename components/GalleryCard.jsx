@@ -4,7 +4,7 @@ export default function GalleryCard(props) {
   const { gallery } = props;
 
   return (
-    <Card>
+    <>
       <Grid.Container gap={3}>
         <Grid md={24} justify="center"><Text h1>Gallery</Text></Grid>
         {gallery.map((c) => (
@@ -22,6 +22,6 @@ export default function GalleryCard(props) {
           </Grid>
         ))}
       </Grid.Container>
-    </Card>
+    </>
   );
 }

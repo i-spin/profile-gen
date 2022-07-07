@@ -35,11 +35,11 @@ export default function Home(props) {
         />
         <meta name="theme-color" content="#fff" />
       </Head>
-      <Page>
-        <Page.Header>
+      <Page margin={0} padding={0} width="100%">
+        <Page.Header height="10vh">
           <Bar themeType={themeType} toggleTheme={toggleTheme} parallaxRef={parallaxRef} title={data.profile.name} />
         </Page.Header>
-        <Page.Content>
+        <Page.Content padding={0}>
           <Parallax pages={3} ref={parallaxRef}>
             <ParallaxLayer offset={0} speed={1.5}>
               <HomeCard profile={data.profile} />
