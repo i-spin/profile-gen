@@ -2,6 +2,8 @@
 profile:
   title: Hello, I'm i-spin!
   name: i-spin
+  about: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Eu sem integer vitae justo eget magna fermentum iaculis. Ornare arcu odio ut sem nulla pharetra diam sit amet. Non tellus orci ac auctor. Dolor sit amet consectetur adipiscing elit ut aliquam. Tortor aliquam nulla facilisi cras. Aliquam faucibus purus in massa tempor nec feugiat. Non nisi est sit amet facilisis magna. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Tellus molestie nunc non blandit massa enim nec dui nunc. Ultricies mi quis hendrerit dolor magna eget est lorem. Turpis tincidunt id aliquet risus feugiat in ante. Ac felis donec et odio pellentesque diam volutpat commodo sed. Risus viverra adipiscing at in tellus integer. Magna etiam tempor orci eu. Pretium quam vulputate dignissim suspendisse in est ante in nibh. Pellentesque sit amet porttitor eget dolor morbi. Amet dictum sit amet justo donec enim diam vulputate
   image:
     path: /images/newpfp.png
     dimentions:
