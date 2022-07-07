@@ -6,7 +6,7 @@ export default function HomeCard(props) {
   const { profile } = props;
 
   return (
-    <Card style={{ height: profile.image.dimentions.height }}>
+    <Card>
       <Grid.Container gap={5} justify="space-between">
         <Grid md={12}>
           <Image
