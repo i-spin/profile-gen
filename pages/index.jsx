@@ -7,7 +7,7 @@ import LoadingBlankslate from "../components/LoadingBlankslate";
 import Bar from "../components/Bar";
 import { useRef } from "react";
 import HomeCard from "../components/HomeCard";
-import GallaryCard from "../components/GallaryCard";
+import GalleryCard from "../components/GalleryCard";
 
 export default function Home(props) {
   const { toggleTheme, themeType } = props;
@@ -45,7 +45,7 @@ export default function Home(props) {
               <HomeCard profile={data.profile} />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.5}>
-              <GallaryCard gallary={data.gallary} />
+              <GalleryCard gallary={data.gallary} />
             </ParallaxLayer>
             <ParallaxLayer offset={2} speed={1.5}>
               <HomeCard profile={data.profile} />

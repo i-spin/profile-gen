@@ -1,13 +1,13 @@
 import { Card, Grid, Image, Link, Text } from "@geist-ui/core";
 
-export default function GallaryCard(props) {
-  const { gallary } = props;
+export default function GalleryCard(props) {
+  const { gallery } = props;
 
   return (
     <Card>
       <Grid.Container gap={3}>
-        <Grid md={24} justify="center"><Text h1>Gallary</Text></Grid>
-        {gallary.map((c) => (
+        <Grid md={24} justify="center"><Text h1>Gallery</Text></Grid>
+        {gallery.map((c) => (
           <Grid md={12} key={c.title}>
             <Card shadow>
               <Image src={c.path} draggable={false} alt={c.title} />
