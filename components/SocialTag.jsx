@@ -1,5 +1,5 @@
 import { FaDiscord, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Link, useClipboard, useToasts } from "@geist-ui/core";
+import { Link, useClipboard, useToasts, Tooltip } from "@geist-ui/core";
 
 export default function SocialTag(props) {
   const { platform, user, iconSize } = props;
@@ -14,7 +14,7 @@ export default function SocialTag(props) {
           setToast({text: 'Copied to clipboard.', delay: 2000});
         }}>
           <FaDiscord size={iconSize} style={{ margin: "0.5rem" }} />
-          {user}
+          <Tooltip text={'Click to copy.'}>{user}</Tooltip>
         </Link>
       );
     case "GitHub":
