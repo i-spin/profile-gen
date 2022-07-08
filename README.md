@@ -1,4 +1,5 @@
-A simple and modern profile generator for artists.
+A simple and modern website generator.
+Still wip, but 90% finished
 
 mess around the config file and run the website to see what happens!
 
